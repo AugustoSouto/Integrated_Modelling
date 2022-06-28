@@ -3,6 +3,9 @@ rm(list = ls())
 ####INTRO####
 
 path_tala <-
+"/Users/augustosouto/Dropbox/Mac/Desktop/SWATala_junio/Modelo_intento2000_ROTACIONES_16_grass_agrl_cambio_clima_90_20_saco_Qmin_embalse/Embalse01/Scenarios/Default/TxtInOut/"
+
+path_tala <-
 "/Users/augustosouto/Dropbox/Mac/Desktop/SWATala/Modelo_intento2000_ROTACIONES/Embalse01/Scenarios/Default/TxtInOut/"
 
 setwd(path_tala)
@@ -48,6 +51,9 @@ hru_2[mgt] <-
   file[1] |> substr(luse_position[1]-2 , luse_position[1]-1) 
 
 }
+
+
+#hola
 
 hru_1 <-
 stringr::str_remove(hru_1, "S")
@@ -164,12 +170,6 @@ write()
   
 }
   
-irr_eff(soyb_file = soyb_management, irr_eff = "70.000")
-
-
-  
-
-
 #operaciones: 10, 1, 10 riego, plant, riego
 #             10, 5, 1 riego, harv & kill, plant
 #             8, 1, 10 kill, plant, auto irr init

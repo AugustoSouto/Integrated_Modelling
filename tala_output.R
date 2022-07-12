@@ -3,6 +3,9 @@ rm(list = ls())
 path<-  
 "C:/Users/Augusto/Desktop/SWATala_junio/Modelo_intento2000_ROTACIONES_16_grass_agrl_cambio_clima_90_20_saco_Qmin_embalse/Embalse01/Scenarios/Default/TxtInOut/"
 
+project_path <-
+  "C:/Users/Augusto/Desktop/Git/Integrated_Modelling/"
+
 setwd(path)
 
 
@@ -101,10 +104,8 @@ output_ambiental <-
                                                             unit = 10)))
                      
                      
+setwd(project_path)
+rm(irr, lista, lulc, sub, yld)
+save.image(paste0("swat_output.RData"))
 
-setwd(paste0(model_scripts, "Data_Simulaciones_SWAT"))
-save.image(paste0(rownames(scenarios)[sc], ".RData"))
 
-
-usethis::use_git_config(user.name="augusto", 
-                        user.email="augustosoutoperez@gmail.com")
